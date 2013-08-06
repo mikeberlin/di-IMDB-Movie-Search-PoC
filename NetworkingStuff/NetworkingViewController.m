@@ -60,7 +60,7 @@
     cell.titleLabel.text = title;
 	cell.yearLabel.text = [NSString stringWithFormat:@"%@", year];
 	
-	NSURL *posterUrl = [NSURL URLWithString:[movie valueForKey:@"poster"]];
+	NSURL *posterUrl = [NSURL URLWithString:[[movie valueForKey:@"poster"] valueForKey:@"cover"]];
 	NSURLRequest *request = [NSURLRequest requestWithURL:posterUrl];
 	
 	NSLog(@"about to load image");
